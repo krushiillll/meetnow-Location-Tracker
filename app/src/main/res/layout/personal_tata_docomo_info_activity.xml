@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gnt_black"
+    tools:context="com.meetnow.location.tracker.Personal_TataDocomoInfo_Activity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:onClick="back"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/latobold"
+            android:text="SIM Information"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <RelativeLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                android:padding="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ad Loading..."
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="12dp"/>
+
+
+                <FrameLayout
+                    android:id="@+id/frameNativeAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="315dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/AirtelRL"
+                android:background="@drawable/device_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/airtelCard"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    app:cardCornerRadius="@dimen/_50sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/airtelImg"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/sim_docomo128" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/airtelCard"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/latobold"
+                    android:text="Tata Docomo"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/device_back"
+                android:layout_below="@+id/AirtelRL"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/htr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/how_to_recharge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/_135_16_digitd_code"
+                    android:textColor="@color/gnt_gray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/mbe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/htr"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/main_balance_enquiry"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/_111"
+                    android:textColor="@color/gnt_gray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/mebe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mbe"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/message_balance_enquiry"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/_111_1"
+                    android:textColor="@color/gnt_gray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/nbe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mebe"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/net_balance_enquiry"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/_123_1"
+                    android:textColor="@color/gnt_gray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/htkyn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nbe"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/how_to_know_your_number"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/_580"
+                    android:textColor="@color/gnt_gray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/ccn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/htkyn"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/customer_care_number"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:fontFamily="@font/latoregular"
+                    android:text="@string/_121"
+                    android:textColor="@color/gnt_gray"
+                    android:textSize="@dimen/_13sdp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/banner_container"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true" />-->
+
+</RelativeLayout>

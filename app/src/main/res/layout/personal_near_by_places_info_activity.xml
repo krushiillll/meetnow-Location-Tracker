@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gnt_black"
+    tools:context="com.meetnow.location.tracker.Personal_NearByPlacesInfo_Activity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:onClick="back"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/latobold"
+            android:text="Near by Places"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gnt_black">
+
+            <RelativeLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:padding="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ad Loading..."
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="12dp"/>
+
+
+                <FrameLayout
+                    android:id="@+id/frameSmallNativeAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/foodrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin"
+                android:layout_marginLeft="@dimen/_6sdp">
+
+                <TextView
+                    android:id="@+id/foodtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/latobold"
+                    android:text="@string/food_drink"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_15sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/Resturant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/foodtv"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVresturant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="PersonalResturant"
+                        android:src="@drawable/rest" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/foodtv"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/Resturant">
+
+                    <ImageView
+                        android:id="@+id/IVbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pBar"
+                        android:src="@drawable/bar" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cafe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/foodtv"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/bar">
+
+                    <ImageView
+                        android:id="@+id/IVcoffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pCoffee"
+                        android:src="@drawable/cafe" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Resturant"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVdelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pDelivery"
+                        android:src="@drawable/delivery" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/servicerl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/foodrl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/servicestv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/latobold"
+                    android:text="Services"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_15sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/servicestv"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVHotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pHotel"
+                        android:src="@drawable/hotel" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/servicestv"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/hotel">
+
+                    <ImageView
+                        android:id="@+id/IVATM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pATM"
+                        android:src="@drawable/atm" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/salon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/servicestv"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/service">
+
+                    <ImageView
+                        android:id="@+id/IVbeautysalon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pBeauty_salon"
+                        android:src="@drawable/salon" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hotel"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVbank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pBank"
+                        android:src="@drawable/banksvg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hotel"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/bank">
+
+                    <ImageView
+                        android:id="@+id/IVdryclean"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pDry_clean"
+                        android:src="@drawable/clean" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/hospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/service"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/dry">
+
+                    <ImageView
+                        android:id="@+id/IVhospital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pHospital"
+                        android:src="@drawable/hospital" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bank"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVgas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pGas"
+                        android:src="@drawable/gas" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pharmacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bank"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/gas">
+
+                    <ImageView
+                        android:id="@+id/IVpharmacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pPharmacy"
+                        android:src="@drawable/pharmacy" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/thingstodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/servicerl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/thingstodotv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/latobold"
+                    android:text="Things to do"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_15sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/park"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/thingstodotv"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVpark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pPark"
+                        android:src="@drawable/park" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gym"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/thingstodotv"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/park">
+
+                    <ImageView
+                        android:id="@+id/IVgym"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pGym"
+                        android:src="@drawable/gym" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/art"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/thingstodotv"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/gym">
+
+                    <ImageView
+                        android:id="@+id/IVart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="0dp"
+                        android:onClick="pArt"
+                        android:src="@drawable/art" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stadium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/park"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVstadium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pStadium"
+                        android:src="@drawable/stadium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/nightlife"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/park"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/stadium">
+
+                    <ImageView
+                        android:id="@+id/IVnightlife"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pNight_life"
+                        android:src="@drawable/nightlife" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/amusement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gym"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/nightlife">
+
+                    <ImageView
+                        android:id="@+id/IVamusement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pAmusement_park"
+                        android:src="@drawable/park" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stadium"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVmovies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pMovies"
+                        android:src="@drawable/movies" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/musem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stadium"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/movies">
+
+                    <ImageView
+                        android:id="@+id/IVmuseum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pMuseum"
+                        android:src="@drawable/museum" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shoppingrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thingstodo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/shopping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/latobold"
+                    android:text="Shopping"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_15sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/grocery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shopping"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVgrocery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pGrocery"
+                        android:src="@drawable/grocery" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shopping"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/grocery">
+
+                    <ImageView
+                        android:id="@+id/IVbook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pBook"
+                        android:src="@drawable/book" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shopping"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/book">
+
+                    <ImageView
+                        android:id="@+id/IVcardealers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pCar_dealers"
+                        android:src="@drawable/cars" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/grocery"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVhome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pHome_garden"
+                        android:src="@drawable/garden" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/apparel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/grocery"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/home">
+
+                    <ImageView
+                        android:id="@+id/IVapparel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pApparel"
+                        android:src="@drawable/appreal" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shopping1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/book"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/apparel">
+
+                    <ImageView
+                        android:id="@+id/IVshopping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:onClick="pShopping"
+                        android:src="@drawable/shopping" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/electronics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/IVelectroinc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="pElectronics"
+                        android:src="@drawable/electronic" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/jewelry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/electronics">
+
+                    <ImageView
+                        android:id="@+id/IVjewelry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="pJewelry"
+                        android:src="@drawable/lewelry" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/banner_container"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true" />-->
+
+</RelativeLayout>

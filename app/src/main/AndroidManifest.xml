@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraText">
+
+    <uses-permission
+        android:name="android.permission.LOCAL_MAC_ADDRESS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />-->
+    <!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.androidtutorialpoint.mymapsappsdirection.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />-->
+    <uses-feature android:name="android.hardware.camera" />
+
+
+    <application
+        android:name=".openaaaads.Myapplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:replace="android:networkSecurityConfig"
+        android:theme="@style/Theme.Numberlocatormobilepersonal"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".Personal_OnBoarding_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_ExitDialog_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_ThankYou_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_Policy_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_Continue_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_Next_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_FindLocation_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_BankDetailInfo_Activity"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB2nul3xCrb5SZqVgH9jJ_sBpS1sXFtRq4" />
+        <activity
+            android:name=".PersonalCurrentLocation_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_TrafficFinderInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_NearByPlacesInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_AudioManager_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_SystemUsage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_DeviceInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Persoonal_GPSLiveLocation_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_BankInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_CallInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Peronal_MobileToolsInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_MobileNumberFinder_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_MobileLocation_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_BsnlInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_TelenorInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalIdeaInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_JioInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_TataDocomoInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_VodafoneInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_AircelInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_AirtelInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_SIMCardInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Personal_DashBoard_Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Personal_Start_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PersonalWebActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Personal_Splash_Activity"
+            android:exported="true">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="ca-app-pub-3940256099942544~3347511713" />
+
+
+</application>
+
+</manifest>

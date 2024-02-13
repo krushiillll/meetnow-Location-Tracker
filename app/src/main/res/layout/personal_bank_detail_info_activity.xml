@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.meetnow.location.tracker.Personal_BankDetailInfo_Activity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:onClick="back"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/TitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/latobold"
+            android:textColor="@color/gnt_white"
+
+            android:textSize="@dimen/_20sdp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/toolbar_back">
+
+        <RelativeLayout
+            android:background="@drawable/device_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                android:padding="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ad Loading..."
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="12dp"/>
+
+
+                <FrameLayout
+                    android:id="@+id/frameNativeAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="315dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin">
+
+                <ImageView
+                    android:id="@+id/bankIcon"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_20sdp" />
+
+                <TextView
+                    android:id="@+id/BankTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bankIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/latobold"
+                    android:text="bank"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/accountbal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bank"
+                android:layout_marginTop="@dimen/_30sdp">
+
+                <TextView
+                    android:id="@+id/checkbal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/latobold"
+                    android:text="Check your account balance"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/IVCall"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_toLeftOf="@+id/IVShare"
+                    android:background="@drawable/ring_back"
+                    android:onClick="LocatorAccountBalance"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_call" />
+
+                <ImageView
+                    android:id="@+id/IVShare"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    android:background="@drawable/ring_back"
+                    android:onClick="shareAccountBalance"
+                    android:padding="@dimen/_7sdp"
+                    android:src="@drawable/ic_share" />
+
+                <TextView
+                    android:id="@+id/TVCheckbalNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkbal"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/latobold"
+                    android:text="Check your account balance"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/care"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/accountbal"
+                android:layout_marginTop="@dimen/_30sdp">
+
+                <TextView
+                    android:id="@+id/carecontactTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/latobold"
+                    android:text="Customer Care Contact"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/IVCall1"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_toLeftOf="@+id/IVShare1"
+                    android:background="@drawable/ring_back"
+                    android:onClick="LocatorCallCustomerCare"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_call" />
+
+                <ImageView
+                    android:id="@+id/IVShare1"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    android:background="@drawable/ring_back"
+                    android:onClick="LocatorshareCustomerCare"
+                    android:padding="@dimen/_7sdp"
+                    android:src="@drawable/ic_share" />
+
+                <TextView
+                    android:id="@+id/TVCustomerCare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/carecontactTV"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/latobold"
+                    android:text="Customer Care Contact"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/statement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/care"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/miniTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/latobold"
+                    android:text="Ministatement contact"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/IVCall2"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_toLeftOf="@+id/IVShare2"
+                    android:background="@drawable/ring_back"
+                    android:onClick="LocatorCallMiniStatement"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_call" />
+
+                <ImageView
+                    android:id="@+id/IVShare2"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_13sdp"
+                    android:background="@drawable/ring_back"
+                    android:onClick="LocatorshareMiniStatement"
+                    android:padding="@dimen/_7sdp"
+                    android:src="@drawable/ic_share" />
+
+                <TextView
+                    android:id="@+id/TVMiniStatement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/miniTV"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/latobold"
+                    android:text="Ministatement contact"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/banner_container"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_alignParentBottom="true"/>-->
+
+</RelativeLayout>

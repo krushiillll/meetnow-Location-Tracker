@@ -1,0 +1,148 @@
+<resources>
+    <string name="app_name">Meetnow Mobile Location Tracker</string>
+    <string name="how_to_recharge">How to Recharge</string>
+    <string name="_120_16_digitd_code">*120*(16 digitd code)#</string>
+    <string name="main_balance_enquiry">Main Balance Enquiry</string>
+    <string name="message_balance_enquiry">Message Balance Enquiry</string>
+    <string name="net_balance_enquiry">Net Balance Enquiry</string>
+    <string name="how_to_know_your_number">How to know your number</string>
+    <string name="_121_or_198">121 or 198</string>
+    <string name="customer_care_number">Customer care number</string>
+    <string name="_121_9">*121*9#</string>
+    <string name="_123_10_123_11">*123*10#/*123*11#</string>
+    <string name="_555">*555#</string>
+    <string name="_123">*123#</string>
+    <string name="_124_16_digitd_code">*124*(16 digitd code)#</string>
+    <string name="_140_16_digitd_code">*140*(16 digitd code)#</string>
+    <string name="_135_16_digitd_code">*135*2*(16 digitd code)#</string>
+    <string name="_123_16_digitd_code">*123*(16 digitd code)#</string>
+    <string name="_125">*125#</string>
+    <string name="_111_5">*111*5#</string>
+    <string name="_123_1">*123*1#</string>
+    <string name="_1">*1#</string>
+    <string name="_145_or_146">*145# or *146#</string>
+    <string name="_142">*142#</string>
+    <string name="_111_6_2">*111*6*2#</string>
+    <string name="_777_0">*777*0#</string>
+    <string name="_198">198</string>
+    <string name="_121">121</string>
+    <string name="_580">*580#</string>
+    <string name="_111_1">*111*1#</string>
+    <string name="_111">*111#</string>
+    <string name="_1800_889_9999">1800 889 9999</string>
+    <string name="_333_then_press_2">*333# then press 2</string>
+    <string name="_112_then_press_3">*112# then press 3</string>
+    <string name="_333">*333#</string>
+    <string name="_1800_345_1500">1800 345 1500</string>
+    <string name="_124">*124#</string>
+    <string name="_123_10">*123*10#</string>
+    <string name="_124_2_16_digits_code">*124*2*(16 digits code)#</string>
+    <string name="_222_2">*222*2#</string>
+    <string name="_222_3_16_digits_code">*222*3*(16 digits code)#</string>
+    <string name="_12345">12345</string>
+    <string name="_167_3">*167*3#</string>
+
+    <string name="get_information">Get Information: </string>
+    <string name="hard_soft_info">Hardware and Software Information:</string>
+    <string name="model">Model:       </string>
+    <string name="id">ID:       </string>
+    <string name="manufacturer">Manufacture:       </string>
+    <string name="brand">Brand:       </string>
+    <string name="type">Type:       </string>
+    <string name="user">User:       </string>
+    <string name="base">Base:       </string>
+    <string name="incremental">Incremental:       </string>
+    <string name="sdk">SDK:       </string>
+    <string name="board">Board:       </string>
+    <string name="host">Host:       </string>
+    <string name="fingerprint">Fingerprint:       </string>
+    <string name="versioncode">Version:       </string>
+    <string name="securityppatch">Security Patch:       </string>
+
+    <string name="instructionset">Instruction Set:       </string>
+
+    <string name="resolution">RESOLUTION:       </string>
+    <string name="screendensity">SCREEN DENSITY:       </string>
+    <string name="refreshrate">REFRESH RATE:       </string>
+    <string name="physicalsize">PHYSICAL SIZE:       </string>
+    <string name="food_drink"><![CDATA[Food & Drink]]></string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string-array name="map_array">
+        <item>NORMAL</item>
+        <item>HYBRID</item>
+        <item>SATELLITE</item>
+        <item>TERRAIN</item>
+    </string-array>
+
+    <string name="ad_attribution">Ad</string>
+
+    <string-array name="banks">
+
+        <item>Axis Bank</item>
+        <item>Allahabad Bank</item>
+        <item>Bank of Baroda</item>
+        <item>Bandhan Bank</item>
+        <item>Bhartiya Mahila Bank</item>
+        <item>Central Bank of India</item>
+        <item>Canara bank</item>
+        <item>Dena Bank</item>
+        <item>Dhanlakshmi Bank</item>
+        <item>DCB Bank</item>
+        <item>Federal Bank</item>
+        <item>HDFC Bank</item>
+        <item>IDBI Bank</item>
+        <item>ICICI Bank</item>
+        <item>IndusInd Bank</item>
+        <item>ING Vysya Bank</item>
+        <item>Karur Vysya Bank</item>
+        <item>Karnataka Bank</item>
+        <item>Oriental Bank of Commerce</item>
+        <item>Punjab National Bank</item>
+        <item>RBL Bank</item>
+        <item>State Bank of India</item>
+        <item>Saraswat Bank</item>
+        <item>State Bank of Mysore</item>
+        <item>State Bank of Patiala</item>
+        <item>South Indian Bank</item>
+        <item>Tamilnad Mercantile Bank Limited</item>
+        <item>Union Bank of India</item>
+        <item>Varachha Bank</item>
+        <item>Vijaya Bank</item>
+        <item>Yes Bank</item>
+        <item>Royal Bank of Scotland</item>
+        <item>Yes Bank</item>
+        <item>City Bank</item>
+        <item>Kotak Mahindra Bank</item>
+        <item>Bank of India</item>
+        <item>Corporation Bank</item>
+        <item>American Express</item>
+        <item>HSBS Bank</item>
+        <item>Indian Overseas Bank</item>
+        <item>ABN AMRO</item>
+        <item>Andhra Bank</item>
+        <item>ANZ Bank</item>
+        <item>Bank of Maharashtra</item>
+        <item>Barclays Bank</item>
+        <item>Indian Bank</item>
+        <item>Punjab and Sind Bank</item>
+        <item>Cashnet Bank</item>
+        <item>Centurion Bank of Punjab</item>
+        <item>Standard Chartered Bank</item>
+        <item>State Bank of Bikaner</item>
+        <item>Deutsche Bank</item>
+        <item>State Bank of Travancore</item>
+        <item>Syndicate Bank</item>
+        <item>United Bank of India</item>
+
+    </string-array>
+
+    <string name="mobile_loca">Mobile\nLocation</string>
+
+    <string name="find_loc">Find location from mobile\nnumber just select country\nand enter mobile number\nand get location</string>
+    <string name="terms_amp_condition"><![CDATA[Terms & Condition]]></string>
+    <string name="continue_tv">Also get information of your\ndevice\'s software and SIM operator.\nSet ringtone, notification tone\nand alarm.</string>
+    <string name="next_tv">Lorem Ipsum is\nsimply dummy text of\nthe printing and\ntypesetting industry.\nLorem Ipsum has\nbeen the industry\'s\nstandard dummy text\never since the 1500s,</string>
+    <string name="please_wait">Please wait...</string>
+</resources>

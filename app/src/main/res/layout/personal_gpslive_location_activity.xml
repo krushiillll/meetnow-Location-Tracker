@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.meetnow.location.tracker.Persoonal_GPSLiveLocation_Activity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:onClick="back"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/blue" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/latobold"
+            android:text="Live location"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_15sdp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@+id/banner_container">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rlloc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:elevation="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvdevice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Current GPS location"
+                        android:textColor="#002E5B"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TableLayout
+                        android:id="@+id/table2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_margin="@dimen/_5sdp">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tvlat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/_5sdp"
+                                android:textStyle="bold"
+                                android:text="Latitude:- "
+                                android:textColor="#002E5B"
+                                android:textSize="@dimen/_15sdp" />
+
+                            <TextView
+                                android:id="@+id/LatitudeTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tvlat"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:padding="@dimen/_5sdp"
+                                android:textColor="#002E5B"
+                                android:textSize="@dimen/_15sdp" />
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tvlong"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Longitude:- "
+                                android:textStyle="bold"
+                                android:textColor="#002E5B"
+                                android:textSize="@dimen/_15sdp" />
+
+                            <TextView
+                                android:id="@+id/LongitudeTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvdevice"
+                                android:layout_weight="1"
+                                android:padding="@dimen/_5sdp"
+                                android:text=""
+                                android:textStyle="bold"
+                                android:textColor="#002E5B"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/tvcpa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/table2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Current Postal Address"
+                        android:textColor="#002E5B"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/currentPostalAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvcpa"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:textAlignment="center"
+                        android:textColor="#002E5B"
+                        android:textSize="@dimen/_15sdp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/showlocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/rlloc"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/_35sdp"
+                android:layout_marginBottom="80dp"
+                android:background="#000000"
+                android:onClick="Personalshowlocation">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Show My Location on Map"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/banner_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

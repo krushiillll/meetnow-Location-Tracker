@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Mobile Number Locator"
+        android:textColor="#002E5B"
+        android:textSize="@dimen/_17sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Find location of any number"
+        android:textColor="@color/gnt_gray"
+        android:textSize="@dimen/_12sdp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_1" />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="@dimen/_70sdp">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:background="#002E5B" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_toRightOf="@+id/view1"
+            android:background="@color/gnt_gray" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_toRightOf="@+id/view2"
+            android:background="@color/gnt_gray" />
+
+        <TextView
+            android:id="@+id/nextTV"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:background="@drawable/next_back"
+            android:fontFamily="@font/montserrat_bold"
+            android:padding="@dimen/_10sdp"
+            android:text="Next"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="You accept privacy policy by continuing"
+        android:textColor="@color/gnt_gray"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/termsconditionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/terms_amp_condition"
+        android:textColor="#002E5B" />
+
+</RelativeLayout>

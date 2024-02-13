@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.meetnow.location.tracker.Personal_DashBoard_Activity">
+
+    <RelativeLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ad Loading..."
+            android:textAppearance="@style/adStyle"
+            android:textColor="@color/blue"
+            android:layout_centerInParent="true" />
+
+        <FrameLayout
+            android:id="@+id/frameSmallNativeAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lin"
+        android:layout_marginBottom="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:id="@+id/rrr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/li_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/mobile_loca"
+                            android:layout_width="0dp"
+                            android:onClick="MobileLocation"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_main"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@drawable/circle_bg">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_location" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_main"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:src="@drawable/txt_mobile_location" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/iv_mobile_tools"
+                            android:layout_width="0dp"
+                            android:onClick="MobileTools"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_main2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@drawable/mobile_tool_circle">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_tool" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_main2"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:src="@drawable/txt_mobile_tool" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/li_main2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/li_main"
+                        android:layout_marginTop="-10dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/iv_traffic_finder"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg">
+
+                            <RelativeLayout
+                                android:onClick="TrafficFinder"
+                                android:id="@+id/rl_traffic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@drawable/ic_traffic_circle">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_traffic" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_traffic"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:src="@drawable/txt_traffic_finder" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/iv_nearby_places"
+                            android:layout_width="0dp"
+                            android:onClick="NearByPlaces"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_main_home"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@drawable/ic_near_circle">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_nearby" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_main_home"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:src="@drawable/txt_nearby" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/li_main3"
+                        android:onClick="BankInformation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/li_main2"
+                        android:layout_marginTop="-10dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/iv_bank_info"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_bank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@drawable/ic_bank_circle">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_bank_icon" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_bank"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:src="@drawable/txt_bank" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/iv_sim_info"
+                            android:layout_width="0dp"
+                            android:onClick="SIMCardInfo"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_sim"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@drawable/ic_sim_circle">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_sim" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_sim"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:src="@drawable/txt_sim_card" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/iv_mobile_location"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginTop="@dimen/_20sdp"-->
+    <!--                        android:onClick="MobileLocation"-->
+    <!--                        android:src="@drawable/mobilelocation" />-->
+
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/iv_traffic_finder"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_below="@+id/iv_mobile_tools"-->
+    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--                        android:onClick="TrafficFinder"-->
+    <!--                        android:src="@drawable/trafficfinder" />-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/iv_nearby_places"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_below="@+id/iv_traffic_finder"-->
+    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--                        android:onClick="NearByPlaces"-->
+    <!--                        android:src="@drawable/nearbyplaces" />-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/iv_bank_info"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_below="@+id/iv_nearby_places"-->
+    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--                        android:onClick="BankInformation"-->
+    <!--                        android:src="@drawable/bankinfo" />-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/iv_sim_info"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_below="@+id/iv_bank_info"-->
+    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--                        android:onClick="SIMCardInfo"-->
+    <!--                        android:src="@drawable/siminfo" />-->
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/banner_container"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true" />-->
+

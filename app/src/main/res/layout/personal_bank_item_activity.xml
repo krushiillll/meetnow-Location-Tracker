@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/bankRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="#000000">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="@dimen/_115sdp"
+            android:layout_height="@dimen/_77sdp"
+            android:layout_centerVertical="true"
+            android:background="#000000">
+
+            <ImageView
+                android:id="@+id/IVBank"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/audio_background" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_toLeftOf="@+id/TVBank"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/TVBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_toRightOf="@+id/rl"
+            android:text="bank"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

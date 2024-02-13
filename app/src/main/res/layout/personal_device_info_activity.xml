@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gnt_black">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:onClick="back"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/latobold"
+            android:text="Device Information"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+    </RelativeLayout>
+
+    <!-- Scrollable information text -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="@drawable/toolbar_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                android:padding="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ad Loading..."
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="12dp"/>
+
+
+                <FrameLayout
+                    android:id="@+id/frameNativeAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="315dp"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tvdevice"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/device_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Device"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvdevice"
+                android:background="@drawable/device_back"
+                android:layout_margin="@dimen/_10sdp">
+
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Model"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+
+                    <TextView
+                        android:id="@+id/textViewSetInformation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="ID"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="MANUFACTURER"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/MANUFACTURER"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="BRAND"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/BRAND"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="TYPE"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TYPE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="USER"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/USER"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="SECURITY PATCH"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/SECURITY_PATCH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/tvscreen"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/device_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Screen"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/table1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvscreen"
+                android:background="@drawable/device_back"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Resolution"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Resolution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Screen Density"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ScreenDensity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Refresh Rate"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Refreshrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/tvcamera"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/device_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Camera"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/table2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvcamera"
+                android:background="@drawable/device_back"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Back Camera"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/BackCamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Front Camera"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/FrontCamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/tvandroid"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/device_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Android"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/table3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvandroid"
+                android:background="@drawable/device_back"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="SDK"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/SDK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Version"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/tvprocessor"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/device_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Processor"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/table4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvprocessor"
+                android:background="@drawable/device_back"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="CPU Core"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cpucore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Max Frequency"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/maxfreq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Instruction set"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/instructionset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/tvnetwork"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/device_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Network"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/table5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvnetwork"
+                android:background="@drawable/device_back"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Network Type"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/networkType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="IP address"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ipAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="MAC address"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/macAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/tvoperator"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/table5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/device_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Operator"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/table6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvoperator"
+                android:background="@drawable/device_back"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Operator"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/operatorTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Roaming"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/roamingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_below="@+id/tvdevice"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!-- To fetch information -->
+    <Button
+        android:id="@+id/buttonGetInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="Get Information"
+        android:background="@drawable/device_back"
+        android:backgroundTint="@color/gnt_black"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+<!--
+    <RelativeLayout
+        android:id="@+id/banner_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />-->
+
+</LinearLayout>

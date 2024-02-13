@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.meetnow.location.tracker.Personal_VPN_Activity">
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:text="Skip"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_marginTop="@dimen/_100sdp">
+
+        <TextView
+            android:id="@+id/start1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="VPN start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+        <RelativeLayout
+            android:id="@+id/rr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_50sdp">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Status :- "
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:id="@+id/statusdisconnected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/status"
+                android:textSize="@dimen/_18sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectCountry"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_below="@+id/rr"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bcak_speed">
+
+            <ImageView
+                android:id="@+id/flagIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/selectCountryTV"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/worldwide" />
+
+            <TextView
+                android:id="@+id/selectCountryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Select Country"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <ImageView
+                android:id="@+id/dropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/selectCountryTV"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ccp_ic_arrow_drop_down" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/OnOffBtn"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/selectCountry"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="-500dp"
+            android:src="@drawable/vpn_on" />
+
+        <RelativeLayout
+            android:id="@+id/speeds"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_below="@+id/OnOffBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_400sdp"
+            android:background="@drawable/bcak_speed"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/uploadimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_file_upload_24" />
+
+                <TextView
+                    android:id="@+id/textupload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/uploadimg"
+                    android:text="Upload"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/downloadimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_toRightOf="@+id/textupload"
+                    android:src="@drawable/ic_baseline_download_24" />
+
+                <TextView
+                    android:id="@+id/textdownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/downloadimg"
+                    android:text="Download"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/uploadSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textupload"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:text="7.5 KBPS"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/downloadSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textdownload"
+                    android:layout_marginLeft="@dimen/_143sdp"
+                    android:text="17.5 KBPS"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/NextBtn"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_160sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/back_next"
+        android:text="next"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>
